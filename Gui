@@ -1,0 +1,335 @@
+index.html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>KARIB SHOP | CONCOURS DE LANCEMENT</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@900&family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #ffffff;
+            --accent: #ff5c00;
+            --bg: #000000;
+            --whatsapp: #25D366;
+            --snapchat: #FFFC00;
+            --gold: #FFD700;
+        }
+
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--bg);
+            color: var(--primary);
+            margin: 0;
+            overflow-x: hidden;
+            width: 100%;
+            padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3%3Ffilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/feTurbulence%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .font-art { font-family: 'Unbounded', sans-serif; }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 5rem 1.5rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container-custom { width: 100%; max-width: 1200px; margin: 0 auto; }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 12vw, 8rem);
+            line-height: 0.9;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.05em;
+        }
+
+        .timer-display {
+            font-size: clamp(1.8rem, 8vw, 5.5rem);
+            font-weight: 900;
+            color: var(--accent);
+            letter-spacing: -0.02em;
+        }
+
+        .marquee {
+            background: var(--accent);
+            color: black;
+            padding: 15px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .glass-card {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 12px;
+            padding: 2rem;
+            height: 100%;
+        }
+
+        .giveaway-card {
+            border: 2px dashed var(--gold);
+            background: rgba(255, 215, 0, 0.05);
+            padding: 2.5rem;
+            border-radius: 16px;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        .btn-social {
+            min-height: 65px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+        }
+
+        .btn-social:hover { transform: translateY(-3px); filter: brightness(1.15); }
+
+        .btn-snap-pulse {
+            animation: pulse-snap 2s infinite;
+        }
+
+        @keyframes pulse-snap {
+            0% { box-shadow: 0 0 0 0 rgba(255, 252, 0, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 252, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 252, 0, 0); }
+        }
+
+        .brand-badge {
+            background: rgba(255,255,255,0.1);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        @media (min-width: 1024px) {
+            .grid-desktop-center {
+                display: grid;
+                grid-template-columns: 1.2fr 0.8fr;
+                gap: 4rem;
+                align-items: center;
+                text-align: left;
+            }
+            .giveaway-card { margin: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MARQUEE DES MARQUES -->
+    <div class="marquee">
+        <div class="marquee-content font-art">
+            NIKE • LACOSTE • RALPH LAUREN • IPHONE • ANDROID COMPATIBLE • AIRPODS PRO • NIKE • LACOSTE • RALPH LAUREN • IPHONE • ANDROID COMPATIBLE • AIRPODS PRO • NIKE • LACOSTE • RALPH LAUREN • IPHONE • ANDROID COMPATIBLE • AIRPODS PRO • 
+        </div>
+    </div>
+
+    <!-- SECTION 1 : ACCUEIL & TIMER -->
+    <section class="border-b border-white/10">
+        <div class="container-custom flex flex-col items-center">
+            
+            <div class="mb-10 flex flex-col items-center gap-4">
+                <span class="bg-[--accent] text-black font-art text-[10px] md:text-xs px-6 py-2 uppercase tracking-widest font-bold">
+                    JEU CONCOURS DE LANCEMENT
+                </span>
+                <p class="text-[--gold] font-bold text-sm md:text-lg uppercase tracking-widest">
+                    Qualité Premium • Retrait 971 • iOS & Android
+                </p>
+            </div>
+
+            <h1 class="hero-title font-art">
+                KARIB<br><span class="text-white">SHOP</span>
+            </h1>
+
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <span class="brand-badge uppercase">#NIKE</span>
+                <span class="brand-badge uppercase">#LACOSTE</span>
+                <span class="brand-badge uppercase">#RALPHLAUREN</span>
+                <span class="brand-badge uppercase">#APPLE</span>
+                <span class="brand-badge uppercase">#ANDROID</span>
+            </div>
+
+            <div class="bg-black/40 p-8 md:p-12 rounded-3xl backdrop-blur-xl border border-white/10 w-full max-w-2xl shadow-2xl mb-8">
+                <span class="text-[10px] md:text-xs uppercase tracking-[0.4em] mb-6 block opacity-60 font-bold">Ouverture Officielle de la Boutique :</span>
+                <div id="countdown" class="timer-display font-art">00:00:00:00</div>
+            </div>
+
+            <!-- APPEL SNAPCHAT DIRECT -->
+            <a href="https://www.snapchat.com/add/Karibshop" target="_blank" class="flex items-center gap-3 bg-[--snapchat] text-black px-8 py-3 rounded-full font-bold text-sm tracking-widest hover:scale-105 transition-transform btn-snap-pulse">
+                <span>👻</span> AJOUTE-NOUS SUR SNAPCHAT
+            </a>
+        </div>
+    </section>
+
+    <!-- SECTION 2 : CONCOURS ET PROMOTION -->
+    <section class="border-b border-white/10">
+        <div class="container-custom">
+            <div class="grid-desktop-center">
+                
+                <div class="space-y-10">
+                    <div class="space-y-4">
+                        <h2 class="font-art text-4xl md:text-7xl leading-none uppercase">
+                            LE STYLE<br>
+                            <span class="text-[--accent]">MOINS CHER</span>
+                        </h2>
+                        <p class="text-lg opacity-80 font-bold uppercase tracking-tighter">🔔 Envoie le code KB sur Snapchat !</p>
+                    </div>
+                    
+                    <div class="giveaway-card">
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="text-[--gold] text-3xl">🎁</span>
+                            <p class="text-lg font-black text-[--gold] uppercase tracking-widest text-left leading-tight">Pack Spécial : Ensemble + AirPods Pro</p>
+                        </div>
+                        <div class="space-y-6 text-base md:text-lg leading-relaxed text-left">
+                            <p class="opacity-90">Participez pour tenter de gagner notre pack premium. Nos AirPods sont <strong>100% compatibles iPhone & Android</strong>.</p>
+                            <div class="space-y-4 bg-black/40 p-6 rounded-xl border border-white/10">
+                                <div class="flex gap-4"><span class="text-[--gold] font-art">01</span> <p>Abonne-toi au Snapchat : <span class="text-[--gold] font-bold">Karibshop</span></p></div>
+                                <div class="flex gap-4"><span class="text-[--gold] font-art">02</span> <p>Partage ce site en story.</p></div>
+                                <div class="flex gap-4"><span class="text-[--gold] font-art">03</span> <p>Envoie le code <span class="text-[--gold] text-3xl font-black block mt-2">"KB"</span> sur Snap ou WhatsApp.</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <a href="https://www.snapchat.com/add/Karibshop" target="_blank" class="btn-social bg-[--snapchat] text-black shadow-lg btn-snap-pulse">
+                            👻 CODE "KB" SUR SNAP
+                        </a>
+                        <a href="https://wa.me/590691243889?text=KB" target="_blank" class="btn-social bg-[--whatsapp] text-black shadow-lg">
+                            💬 CODE "KB" SUR WA
+                        </a>
+                    </div>
+                </div>
+
+                <div class="glass-card mt-12 lg:mt-0 text-left">
+                    <h3 class="font-art text-xl uppercase text-[--accent] border-b border-white/10 pb-6 mb-8">Service 971 Premium :</h3>
+                    <div class="space-y-8">
+                        <div class="flex items-center gap-6 group">
+                            <div class="w-16 h-16 rounded-xl bg-white/5 flex items-center justify-center text-2xl group-hover:bg-[--accent] transition-colors">📱</div>
+                            <div>
+                                <p class="font-bold uppercase text-lg">iOS & Android</p>
+                                <p class="text-xs opacity-60">Tous nos accessoires fonctionnent sur tous les téléphones.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6 group">
+                            <div class="w-16 h-16 rounded-xl bg-white/5 flex items-center justify-center text-2xl group-hover:bg-[--accent] transition-colors">📦</div>
+                            <div>
+                                <p class="font-bold uppercase text-lg">Livraison Bas Prix</p>
+                                <p class="text-xs opacity-60">Livraison rapide sur toute l'île à prix réduit.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6 group">
+                            <div class="w-16 h-16 rounded-xl bg-white/5 flex items-center justify-center text-2xl group-hover:bg-[--accent] transition-colors">🤝</div>
+                            <div>
+                                <p class="font-bold uppercase text-lg">Retrait Gratuit</p>
+                                <p class="text-xs opacity-60">Récupère ton colis en main propre sans frais.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3 : ADN -->
+    <section class="container-custom py-24">
+        <div class="text-center mb-16 md:mb-24">
+            <h2 class="font-art text-4xl md:text-7xl uppercase mb-8">
+                COMPATIBILITÉ<br><span class="text-[--accent]">TOTALE SANS LIMITES</span>
+            </h2>
+            <div class="w-32 h-1.5 bg-[--accent] mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass-card p-10 hover:border-[--accent] transition-all">
+                <div class="text-[--accent] text-4xl mb-6">🔄</div>
+                <h4 class="font-art text-lg uppercase mb-4">Multi-Plateforme</h4>
+                <p class="opacity-60 text-sm leading-relaxed text-left">Que vous soyez sur iPhone ou Samsung, nos produits s'associent instantanément pour une expérience parfaite.</p>
+            </div>
+            <div class="glass-card p-10 hover:border-[--accent] transition-all">
+                <div class="text-[--accent] text-4xl mb-6">🏘️</div>
+                <h4 class="font-art text-lg uppercase mb-4">Retrait Local</h4>
+                <p class="opacity-60 text-sm leading-relaxed text-left">Gagnez du temps et de l'argent. Choisissez le retrait direct pour vos commandes urgentes.</p>
+            </div>
+            <div class="glass-card p-10 hover:border-[--accent] transition-all">
+                <div class="text-[--accent] text-4xl mb-6">📉</div>
+                <h4 class="font-art text-lg uppercase mb-4">Prix en baisse</h4>
+                <p class="opacity-60 text-sm leading-relaxed text-left">Le meilleur des marques (Nike, Ralph, Lacoste) avec des prix en baisse constante pour la Guadeloupe.</p>
+            </div>
+        </div>
+
+        <footer class="mt-24 pt-12 border-t border-white/10 opacity-40 text-center">
+            <p class="font-art text-[10px] tracking-[0.5em] uppercase mb-4">Karib Shop • Code Concours : KB • 2026</p>
+            <p class="text-[9px] uppercase tracking-widest">Retrait Main Propre • Livraison Bas Prix • iOS & Android</p>
+        </footer>
+    </section>
+
+    <script>
+        const targetDate = new Date("March 1, 2026 00:00:00").getTime();
+        const timerElement = document.getElementById('countdown');
+
+        function updateTimer() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                timerElement.textContent = "BOUTIQUE OUVERTE";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            timerElement.textContent = 
+                `${days.toString().padStart(2, '0')}:${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
+</body>
+</html>
